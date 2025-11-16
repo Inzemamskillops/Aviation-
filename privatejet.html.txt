@@ -1,0 +1,163 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>One Page — Sample</title>
+  <meta name="description" content="A simple one-page HTML template." />
+  <style>
+    :root{
+      --bg:#f7fafc; --card:#ffffff; --accent:#0ea5a4; --text:#0f172a;
+      --muted:#64748b; --radius:12px;
+      font-family: Inter, system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial;
+    }
+    *{box-sizing:border-box}
+    body{margin:0;background:var(--bg);color:var(--text);line-height:1.5}
+    header{background:linear-gradient(90deg,#ffffffcc,#f1f5f9cc);backdrop-filter: blur(4px);position:sticky;top:0;z-index:10;border-bottom:1px solid #e6eef5}
+    .container{max-width:1000px;margin:0 auto;padding:20px}
+    nav{display:flex;align-items:center;justify-content:space-between;gap:16px}
+    .brand{font-weight:700;letter-spacing:.4px}
+    .nav-links{display:flex;gap:14px}
+    .nav-links a{color:var(--muted);text-decoration:none;font-size:0.95rem}
+    .hero{display:grid;grid-template-columns:1fr 320px;gap:24px;align-items:center;padding:48px 0}
+    .card{background:var(--card);padding:22px;border-radius:var(--radius);box-shadow:0 6px 18px rgba(15,23,42,0.06)}
+    h1{margin:0 0 8px;font-size:1.8rem}
+    p.lead{color:var(--muted);margin:0 0 16px}
+    .cta{display:inline-block;padding:10px 16px;border-radius:10px;background:var(--accent);color:#fff;text-decoration:none;font-weight:600}
+    .features{display:flex;gap:12px;margin-top:16px}
+    .feature{flex:1;padding:12px;border-radius:10px;background:#fbfbfd;text-align:center}
+    .grid{display:grid;grid-template-columns:repeat(3,1fr);gap:12px;margin-top:16px}
+    .grid img{width:100%;height:100px;object-fit:cover;border-radius:8px}
+    footer{padding:24px 0;color:var(--muted);text-align:center}
+    /* Responsive */
+    @media (max-width:900px){
+      .hero{grid-template-columns:1fr; padding:28px 0}
+      .grid{grid-template-columns:repeat(2,1fr)}
+    }
+    @media (max-width:520px){
+      .nav-links{display:none}
+      .container{padding:14px}
+      .grid{grid-template-columns:1fr}
+    }
+    /* small form */
+    .form-row{display:flex;gap:8px}
+    .form-row input, textarea{flex:1;padding:10px;border:1px solid #e6eef5;border-radius:8px}
+    button{padding:10px 14px;border-radius:8px;border:0;background:var(--accent);color:#fff;cursor:pointer}
+    small{color:var(--muted)}
+  </style>
+</head>
+<body>
+  <header>
+    <div class="container">
+      <nav>
+        <div class="brand">MyOnePage</div>
+        <div class="nav-links" aria-hidden="true">
+          <a href="#about">About</a>
+          <a href="#services">Services</a>
+          <a href="#gallery">Gallery</a>
+          <a href="#contact">Contact</a>
+        </div>
+      </nav>
+    </div>
+  </header>
+
+  <main class="container">
+    <section class="hero">
+      <div>
+        <div class="card">
+          <h1>Simple one-page HTML template</h1>
+          <p class="lead">Clean, responsive, and minimal — great for demos, portfolios, or small projects. No frameworks required.</p>
+          <a class="cta" href="#contact">Get in touch</a>
+
+          <div class="features">
+            <div class="feature">
+              <strong>Responsive</strong><br/><small>Works on mobile & desktop</small>
+            </div>
+            <div class="feature">
+              <strong>Lightweight</strong><br/><small>Small CSS, fast load</small>
+            </div>
+            <div class="feature">
+              <strong>Customizable</strong><br/><small>Easily change colors & layout</small>
+            </div>
+          </div>
+        </div>
+
+        <section id="about" style="margin-top:18px">
+          <div class="card">
+            <h2 style="margin-top:0">About</h2>
+            <p>Use this template to showcase a short description, features, or an introduction. Replace text and images as needed.</p>
+            <ul>
+              <li>Simple layout with a hero & gallery</li>
+              <li>Contact form (no back-end)</li>
+              <li>Easy to extend</li>
+            </ul>
+          </div>
+        </section>
+
+        <section id="services" style="margin-top:18px">
+          <div class="card">
+            <h2 style="margin-top:0">Services</h2>
+            <div class="grid" style="grid-template-columns:repeat(3,1fr)">
+              <div class="card" style="padding:12px">
+                <h3 style="margin:0 0 6px">Web Dev</h3>
+                <small>Frontend & backend</small>
+              </div>
+              <div class="card" style="padding:12px">
+                <h3 style="margin:0 0 6px">Hosting</h3>
+                <small>Deploy & maintain</small>
+              </div>
+              <div class="card" style="padding:12px">
+                <h3 style="margin:0 0 6px">Support</h3>
+                <small>Monitoring & fixes</small>
+              </div>
+            </div>
+          </div>
+        </section>
+      </div>
+
+      <aside>
+        <div class="card">
+          <h3 style="margin-top:0">Gallery</h3>
+          <div class="grid">
+            <img src="https://picsum.photos/seed/1/400/300" alt="sample1">
+            <img src="https://picsum.photos/seed/2/400/300" alt="sample2">
+            <img src="https://picsum.photos/seed/3/400/300" alt="sample3">
+          </div>
+          <p style="margin-top:12px"><small>Images are random placeholders from picsum.photos — replace with your images.</small></p>
+        </div>
+      </aside>
+    </section>
+
+    <section id="contact" style="margin-top:18px">
+      <div class="card">
+        <h2 style="margin-top:0">Contact</h2>
+        <p class="lead">Send a message — the form below is just UI (no backend).</p>
+        <form onsubmit="alert('Form submitted (demo)'); return false;">
+          <div class="form-row" style="margin-bottom:8px">
+            <input type="text" placeholder="Your name" required />
+            <input type="email" placeholder="Email" required />
+          </div>
+          <div style="margin-bottom:8px">
+            <textarea rows="4" placeholder="Your message" required style="width:100%;"></textarea>
+          </div>
+          <div style="display:flex;gap:8px;align-items:center">
+            <button type="submit">Send</button>
+            <small>Or email: hello@example.com</small>
+          </div>
+        </form>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="container">
+      <small>© <span id="year"></span> MyOnePage — Made with HTML • No frameworks</small>
+    </div>
+  </footer>
+
+  <script>
+    // small nicety: set current year
+    document.getElementById('year').textContent = new Date().getFullYear();
+  </script>
+</body>
+</html>
